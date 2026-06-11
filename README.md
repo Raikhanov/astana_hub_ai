@@ -277,7 +277,7 @@ VITE_API_BASE_URL=https://your-backend.railway.app/api
 
 ## Деплой
 
-**Backend → Railway**
+**Backend → Render**
 ```bash
 # railway.toml уже настроен
 # Добавь переменные окружения в Railway Dashboard
@@ -312,8 +312,7 @@ vercel --prod
 | Парсер | Apify instagram-post-scraper |
 | База данных | JSON-файл (data/db.json) |
 | Cron | node-cron |
-| Деплой | Railway (backend), Vercel (frontend) |
+| Деплой | Render (backend), Vercel (frontend) |
 
 ---
 
-*Astana Hub · Regional Development Office · 2025*

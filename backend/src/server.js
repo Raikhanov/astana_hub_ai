@@ -29,4 +29,12 @@ cron.schedule('0 */6 * * *', () => {
   require('./services/parser/instagramParser').parseAllHubs().catch(console.error);
 });
 
+
+const SELF_URL = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
+setInterval(() => {
+  fetch(`${SELF_URL}/health`)
+    .then(() => console.log('[Ping] alive'))
+    .catch(() => {});
+}, 14 * 60 * 1000);
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
